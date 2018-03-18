@@ -32,10 +32,16 @@ function calculateMaxMemory(startingMaxPages) {
     return 1;
 }
 
-
+let hasCalculated = false;
 const calculateButton = document.querySelector('#calculate');
 const resultDisplay = document.querySelector('#result');
 calculateButton.addEventListener('click', function() {
+    if (hasCalculated) {
+        return;
+    }
+
+    hasCalculated = true;
+
     try {
         const maxMemoryInPages = calculateMaxMemory(THEORETICAL_MAX);
         const maxMemoryInKibibytes = maxMemoryInPages * 64;
