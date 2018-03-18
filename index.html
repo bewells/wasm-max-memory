@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>How much WASM memory do I have?</h1>
+        <p>
+            WebAssembly uses 32-bit addresses for its linear memory.
+            In theory, this means that the maximum memory size for a
+            WebAssembly module would be 2^32 bytes or 4 GiB.
+        </p>
+        <p>
+            In practice, maximum memory size is limited by a number
+            of environment-specific factors such as available
+            host memory or browser implementation issues. Click
+            the button below to find out how much memory is
+            available on your machine.
+        </p>
+        <p>
+            Warning: Calculating maximum memory involves attempting to
+            allocate the maximum amount. This could place undue stress
+            on your device. Click at your own risk.
+        </p>
+        <button id="calculate">Find my limit</button>
+    </body>
+</html>
